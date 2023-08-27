@@ -1,0 +1,33 @@
+.button-settings {
+    position: fixed;
+    padding: 1em;
+    margin: 2em;
+}
+
+
+.awesome-div1 {
+    display: inline-flex;
+    height: 100px;
+    width: 100px;
+    background: #000;
+    margin-left: 10em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    margin-right: 2em;
+    cursor: pointer;
+    
+}
+
+.awesome-div1:hover .awesome-h3 {
+    visibility: visible;
+    
+}
+
+
+.awesome-h3 {
+    visibility: hidden;
+    margin: auto;
+    color: aqua;
+    font-weight: 300;
+    font-size: 50px;
+}
