@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let x = 0;
 
-   
+
 
 
     button.addEventListener("click", function () {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let h3text = document.createTextNode(div1.id);
         h3.className = 'awesome-h3';
 
-        
+
         let colors = ['blue', 'green', 'red', 'purple', 'yellow', 'orange', 'gray', 'brown'];
 
 
@@ -33,14 +33,29 @@ document.addEventListener("DOMContentLoaded", function () {
             div1.style.background = randomColor;
         })
 
-        div1.addEventListener("dblclick", function() {
-            let space = div1.id;
-            if (space % 2 == 0) {
-                div1.remove(space ++);
+        div1.addEventListener("dblclick", function () {
+
+            let nextSib = div1.nextElementSibling
+
+            let preSib = div1.previousElementSibling
+
+            if (div1.id % 2 === 1) {
+                if (preSib) {
+                    preSib.remove();
+
+                } else {
+                    alert("There isn't a square located before this");
+                }
             }
-            else {
-                alert("There isn't a square located after this one!");
+
+            if (div1.id % 2 === 0) {
+                if (nextSib) {
+                    nextSib.remove();
+                } else {
+                    alert("There isn't a square located after this one!")
+                }
             }
+
         })
 
         h3.appendChild(h3text);
